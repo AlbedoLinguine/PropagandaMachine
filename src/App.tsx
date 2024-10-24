@@ -4,26 +4,33 @@ import antonio from './assets/antoniofreshmen.jpg'
 import dictatorship from './assets/nivdictatorship.jpg'
 import dragon from './assets/nivtraindragon.jpg'
 
-
 function App() {
-  const images = [
-    "antonio",
-    "dictatorship",
-    "dragon",
-  ];
-
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => 
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      prevIndex === 2 ? 0 : prevIndex + 1
     );
   };
 
   const previousImage = () => {
     setCurrentImageIndex((prevIndex) => 
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      prevIndex === 0 ? 2 : prevIndex - 1
     );
+  };
+
+  // Function to get current image based on index
+  const getCurrentImage = () => {
+    switch(currentImageIndex) {
+      case 0:
+        return antonio;
+      case 1:
+        return dictatorship;
+      case 2:
+        return dragon;
+      default:
+        return antonio;
+    }
   };
 
   return (
@@ -45,7 +52,7 @@ function App() {
         alignItems: 'center'
       }}>
         <img
-          src={images[currentImageIndex]}
+          src={getCurrentImage()}
           alt={`Image ${currentImageIndex + 1}`}
           style={{
             maxWidth: '95%',
@@ -76,7 +83,6 @@ function App() {
             zIndex: 10,
             opacity: 0.7,
             transition: 'opacity 0.2s',
-            
           }}
         >
           ←
@@ -103,7 +109,6 @@ function App() {
             zIndex: 10,
             opacity: 0.7,
             transition: 'opacity 0.2s',
-            
           }}
         >
           →
