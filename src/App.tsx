@@ -1,11 +1,15 @@
 import { useState } from 'react'
 import './App.css'
+import antonio from './assets/antoniofreshmen.jpg'
+import dictatorship from './assets/nivdictatorship.jpg'
+import dragon from './assets/nivtraindragon.jpg'
+
 
 function App() {
   const images = [
-    "src/assets/antoniofreshmen.jpg",
-    "src/assets/nivdictatorship.jpg",
-    "src/assets/nivtraindragon.jpg",
+    "antonio",
+    "dictatorship",
+    "dragon",
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
