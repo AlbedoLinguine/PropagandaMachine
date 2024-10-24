@@ -6,8 +6,6 @@ function App() {
     "../src/assets/nivdictatorship.jpg",
     "../src/assets/niv train dragon.jpg",
     "../src/assets/antoniofreshmen.jpg",
-    "/api/placeholder/450/300",
-    "/api/placeholder/400/350"
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -37,7 +35,6 @@ function App() {
       
       <div style={{ 
         width: '95vw',
-        height: '95vh',
         position: 'relative',
         display: 'flex',
         justifyContent: 'center',
