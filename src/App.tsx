@@ -3,9 +3,9 @@ import './App.css'
 
 function App() {
   const images = [
-    "../src/assets/nivdictatorship.jpg",
-    "../src/assets/niv train dragon.jpg",
-    "../src/assets/antoniofreshmen.jpg",
+    "src/assets/antoniofreshmen.jpg",
+    "src/assets/nivdictatorship.jpg",
+    "src/assets/nivtraindragon.jpg",
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
