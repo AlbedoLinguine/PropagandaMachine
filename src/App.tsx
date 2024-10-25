@@ -7,16 +7,17 @@ import shrek from './assets/antonio shrek.jpg'
 
 function App() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const numberOfImages = 3; // minus it by 1
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => 
-      prevIndex === 2 ? 0 : prevIndex + 1
+      prevIndex === numberOfImages ? 0 : prevIndex + 1
     );
   };
 
   const previousImage = () => {
     setCurrentImageIndex((prevIndex) => 
-      prevIndex === 0 ? 2 : prevIndex - 1
+      prevIndex === 0 ? numberOfImages : prevIndex - 1
     );
   };
 
@@ -49,17 +50,23 @@ function App() {
       
       <div style={{ 
         width: '95vw',
+        height: '80vh',
         position: 'relative',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        margin: '0 auto'
       }}>
         <img
           src={getCurrentImage()}
           alt={`Image ${currentImageIndex + 1}`}
           style={{
+            position: 'absolute',
+            left: '50%',
+            top: '50%',
+            transform: 'translate(-50%, -50%)',
             maxWidth: '95%',
-            maxHeight: '95%',
+            maxHeight: '80vh',
             objectFit: 'contain',
             borderRadius: '8px',
           }}
@@ -77,7 +84,7 @@ function App() {
             border: 'none',
             borderRadius: '50%',
             width: '40px',
-            height: '40px',
+            height: '50px',
             cursor: 'pointer',
             fontSize: '20px',
             display: 'flex',
@@ -103,7 +110,7 @@ function App() {
             border: 'none',
             borderRadius: '50%',
             width: '40px',
-            height: '40px',
+            height: '50px',
             cursor: 'pointer',
             fontSize: '20px',
             display: 'flex',
