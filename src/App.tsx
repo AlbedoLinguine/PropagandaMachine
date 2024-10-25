@@ -3,6 +3,7 @@ import './App.css'
 import antonio from './assets/antoniofreshmen.jpg'
 import dictatorship from './assets/nivdictatorship.jpg'
 import dragon from './assets/nivtraindragon.jpg'
+import shrek from './assets/antonio shrek.jpg'
 
 function App() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -28,8 +29,10 @@ function App() {
         return dictatorship;
       case 2:
         return dragon;
+      case 3:
+        return shrek;
       default:
-        return antonio;
+        return dictatorship;
     }
   };
 
