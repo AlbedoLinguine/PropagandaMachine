@@ -4,10 +4,11 @@ import antonio from './assets/antoniofreshmen.jpg'
 import dictatorship from './assets/nivdictatorship.jpg'
 import dragon from './assets/nivtraindragon.jpg'
 import shrek from './assets/antonio shrek.jpg'
+import godfather from './assets/niv godfather.jpg'
 
 function App() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const numberOfImages = 3; // minus it by 1
+  const numberOfImages = 4; // minus it by 1
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => 
@@ -32,6 +33,8 @@ function App() {
         return dragon;
       case 3:
         return shrek;
+      case 4:
+        return godfather;
       default:
         return dictatorship;
     }
