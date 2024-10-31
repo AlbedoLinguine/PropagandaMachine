@@ -6,10 +6,12 @@ import dragon from './assets/nivtraindragon.jpg'
 import shrek from './assets/antonio shrek.jpg'
 import godfather from './assets/niv godfather.jpg'
 import genie from './assets/niv genie.jpg'
+import puppeteer from './assets/puppeteer niv.jpg'
+import dragonproof from './assets/niv training dragons found footage.jpg'
 
 function App() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const numberOfImages = 5; // minus it by 1
+  const numberOfImages = 7; // minus it by 1
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => 
@@ -38,6 +40,10 @@ function App() {
         return godfather;
       case 5:
         return genie;
+      case 6:
+        return dragonproof;
+      case 7:
+        return puppeteer;
       default:
         return dictatorship;
     }
